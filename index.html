@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Movie Ticket Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <h1>🎬 Smart Movie Ticket Booking</h1>
+    <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="controls">
+      <div class="movie-container">
+        <label for="movie">Select a movie:</label>
+        <select id="movie">
+          <option value="220" data-category="Action">Gadar 2 - ₹220</option>
+          <option value="200" data-category="Thriller">OMG 2 - ₹200</option>
+          <option value="250" data-category="Action">Jailer - ₹250</option>
+          <option value="180" data-category="Comedy">Fukrey 3 - ₹180</option>
+          <option value="230" data-category="Romance">Rocky Aur Rani - ₹230</option>
+          <option value="210" data-category="Thriller">Drishyam 2 - ₹210</option>
+        </select>
+      </div>
+
+      <div class="filter-container">
+        <label for="category">Category:</label>
+        <select id="category">
+          <option value="All">All Movies</option>
+          <option value="Action">Action</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Romance">Romance</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="search-box">
+      <label for="movieSearch">Search Movie:</label>
+      <input type="text" id="movieSearch" placeholder="Type a movie name...">
+    </section>
+
+    <ul class="showcase">
+      <li><div class="seat"></div><small>Available</small></li>
+      <li><div class="seat selected"></div><small>Selected</small></li>
+      <li><div class="seat sold"></div><small>Sold</small></li>
+    </ul>
+
+    <section class="container">
+      <div class="screen">SCREEN</div>
+
+      <div class="row">
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        <div class="seat"></div><div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        <div class="seat sold"></div><div class="seat sold"></div>
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        <div class="seat sold"></div><div class="seat sold"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        <div class="seat"></div><div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        <div class="seat sold"></div><div class="seat sold"></div>
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div><div class="seat"></div><div class="seat"></div>
+        <div class="seat"></div><div class="seat sold"></div>
+        <div class="seat sold"></div><div class="seat sold"></div><div class="seat"></div>
+      </div>
+    </section>
+
+    <section class="summary">
+      <p>You have selected <strong><span id="count">0</span></strong> seat(s).</p>
+      <p>Ticket Price: ₹<span id="baseTotal">0</span></p>
+      <p>Discount: <span id="discountPercent">0</span>%</p>
+      <p>Discount Amount: ₹<span id="discountAmount">0</span></p>
+      <p class="final-price">Final Amount: ₹<span id="total">0</span></p>
+      <p id="discountMessage" class="discount-message"></p>
+      <button id="bookBtn" class="book-btn">Book Tickets</button>
+    </section>
+
+    <div id="bookingMessage" class="booking-message"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
